@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Summarization</title>
+    <style>
+      body {
+        background-color: #FFCCCB;
+        font-family: Arial, sans-serif;
+      }
+      .header {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .summary {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 20px 0;
+      }
+      .butt {
+        background: linear-gradient(45deg, #fd3636, #e80000);
+        color: #fff;
+        width: 230px;
+        border: none;
+        border-radius: 25px;
+        padding: 10px;
+        -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+      } 
+      .butt:hover {
+        background: linear-gradient(45deg, #ff5b5b, #ff2626);
+      }
+      .butt:focus {
+        outline: none;
+      } 
+      .box {
+        position: relative;
+        margin: 20px;
+        margin-bottom: 100px;
+      } 
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1><u>TEXT SUMMARIZATION</u></h1>
+    </div>
+    <div class="summary">
+      <b>SUMMARY:</b>
+        <div class="box">
+          <p>{{data}}</p>
+        </div>
+    </div>
+    <form method="post">
+      <a href="{{ url_for('.download_file') }}"><input type="button" class="butt" value="Download File"/></a>
+      <a href="{{url_for('man')}}"><input type="button" class="butt" value="Go Back"/></a>
+    </form>
+  </body>
+</html>
+
